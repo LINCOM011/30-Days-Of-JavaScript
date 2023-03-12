@@ -337,7 +337,7 @@ person.getPersonInfo = function() {
   let skillsWithoutLastSkill = this.skills
     .splice(0, this.skills.length - 1)
     .join(', ')
-  let lastSkill = this.skills.splice(this.skills.length - 1)[0]
+  let lastSkill = this.skills.splice(this.skills.length - 1, 0)
 
   let skills = `${skillsWithoutLastSkill}, and ${lastSkill}`
   let fullName = this.getFullName()
